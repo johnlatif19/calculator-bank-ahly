@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة العائد على الشهادة البنكية | 17.75%</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            📊 حاسبة الشهادة البنكية
+            <span>عائد 17.75%</span>
+        </h1>
+        <div class="subhead">
+            مدة 3 سنوات · صرف شهري · العائد على أصل المبلغ فقط
+        </div>
+
+        <div class="input-group">
+            <label for="amountInput">
+                <span>💵</span> مبلغ الشهادة (بالجنيه المصري)
+            </label>
+            <div class="amount-wrapper">
+                <input type="number" id="amountInput" placeholder="مثال: 5000" min="0" step="any" inputmode="decimal">
+                <span class="currency-badge">ج.م</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-primary" id="calcBtn">
+                <span>🧮</span> احسب العائد
+            </button>
+            <button class="btn btn-secondary" id="resetBtn">
+                <span>🔄</span> مسح
+            </button>
+        </div>
+
+        <div id="resultsContainer" class="results-grid hidden">
+            <div class="result-card">
+                <div class="result-label"><span>📅</span> العائد في الشهر</div>
+                <div class="result-value" id="monthlyValue">0.00 <span class="currency">ج.م</span></div>
+            </div>
+            <div class="result-card">
+                <div class="result-label"><span>📆</span> العائد في السنة</div>
+                <div class="result-value" id="yearlyValue">0.00 <span class="currency">ج.م</span></div>
+            </div>
+            <div class="result-card">
+                <div class="result-label"><span>⏳</span> إجمالي العائد خلال 3 سنوات</div>
+                <div class="result-value" id="totalInterestValue">0.00 <span class="currency">ج.م</span></div>
+            </div>
+            <div class="result-card">
+                <div class="result-label"><span>🏦</span> أصل المبلغ</div>
+                <div class="result-value" id="principalValue">0.00 <span class="currency">ج.م</span></div>
+            </div>
+            <div class="result-card total-card">
+                <div class="result-label"><span>💰</span> إجمالي المبلغ بعد 3 سنوات</div>
+                <div class="result-value" id="totalAmountValue">0.00 <span class="currency">ج.م</span></div>
+            </div>
+        </div>
+
+        <div class="note">
+            <i>⚠️</i> الحساب تقديري بناءً على نسبة عائد سنوية 17.75%، وقد تختلف القيمة الفعلية وفقًا لشروط البنك.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
